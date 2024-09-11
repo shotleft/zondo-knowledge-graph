@@ -90,6 +90,7 @@ The following notebooks reflect sequential stages of development and testing as 
 
 #### _6.1	The built KG_
 - ```G. end_to_end_on_sample_30_unlocked_article.ipynb``` puts it all together. This notebook can be run on the ```source_data/sample_text_30_unlocked.pq``` supplied with the project, and was also used to compile the final knowledge graph on all 2081 articles. Key events and datapoints were output to ```kg_builder.log``` for tracking and troubleshooting.
+- ```H. load_data_to_neo4j.ipynb``` small notebook that loads the neo4j text files into neo4j to construct the final KG
 
 Additional utility notebooks are included for reference as follows:
 
