@@ -35,6 +35,8 @@ Includes data classes for structuring key elements:
 
 Includes all the functions required to build / extend a KG, article by article, from an Article class instance. The main algorithm is ```update_kg_from_article``` which calls the sub-algorithm ```process_entity``` which includes performing EL where possible (up to a maximum of 5 retries).
 
+Also includes methods ```prepare_kg_neo4j_files``` and ```prepare_kg_nx_files``` to export the KGData instance to the appropriate formats to be read in by neo4j and NetworkX library respectively.
+
 #### ```ner/ner_base.py```
 
 Contains the model setup, code used for the initial NER run (Round 1), evaluation options and the option to import from Label Studio
