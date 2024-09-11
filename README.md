@@ -2,6 +2,10 @@
 
 This repo contains all the code that was used to build a knowledge graph from 2081 articles published by News24 on the topic of the _Zondo Commission_ as described in the project report submitted to the University of London. As per agreement with Media24 (who owns the articles), a sample of 30 of the unlocked articles, i.e. those not behind the paywall, is supplied with the code (see ```source_data/sample_text_30_unlocked.pq```).
 
+## Acknowledgements
+
+Where very specific ideas have been used that were found in blogs, stackoverflow, and other online resources, these are acknowledged inline with the relevant code. I also made use of Toqan.ai to get 'starter code' for various low-level functions along the way, which were then expanded upon or re-worked before being incorporated into the code base.
+
 ## Acronyms in this readme.md
 
 - KG - knowledge graph
