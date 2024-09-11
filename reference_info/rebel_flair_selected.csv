@@ -1,0 +1,73 @@
+﻿rebel description,wikidata description,wikidata property,inverse property or label,inverse description,subject,subject NER mapping,object,object NER mapping,flair,flair mapping notes,wikidata code mapping,wikidata description mapping,incl,notes
+position held,position held,P39,P1308,officeholder,human,PERSON,position,POSITION,has_title,use as-is,P39,position held,Y,inverse in source list - consider main
+member of political party,member of political party,P102,Q65971553,has member,human,PERSON,political party,ORG,,,,,Y,
+employer,employer,P108,Q65964542,employee,human,PERSON,organization,ORG,employee_of,use as-is,P108,employer,Y,
+officeholder,officeholder,P1308,P39,position held,position,POSITION,human,PERSON,,,,,,inverse in source list
+country,country,P17,,,,multiple,sovereign state,GPE,,,,,Y,
+chairperson,chairperson,P488,,,organization,ORG,human,PERSON,,,,,Y,
+participant,participant,P710,P1344,participant in,occurrence,EVENT,,"ORG,PERSON",,,,,Y,inverse in source list - consider main
+located in the administrative territorial entity,located in the administrative territorial entity,P131,Q66004864,contains location,,multiple,administrative territorial entity,GPE,based_in,use location as standard,P276,location,Y,
+owned by,owned by,P127,P1830,owner of,organization,ORG,person,"ORG,PERSON",has_shareholder,this is a refinement on the broader owned by,P127,owned by,Y,inverse in source list - consider main
+parent organization,parent organization,P749,P355,subsidiary,organization,ORG,organization,ORG,part_of,use as-is,P749,parent organization,Y,inverse in source list - consider main
+applies to jurisdiction,applies to jurisdiction,P1001,Q98855508,in this jurisdiction,,multiple,administrative territorial entity,GPE,,,,,Y,
+member of,member of,P463,Q65971553,has member,person,PERSON,organization,ORG,,,,,Y,
+headquarters location,headquarters location,P159,Q107586854,headquartered here,organization,ORG,geographical feature,GPE,based_in,use location as standard,P276,location,Y,
+occupation,occupation,P106,Q66507814,occupation of,person,PERSON,occupation,OCCUPATION,,,,,Y,
+subsidiary,has subsidiary,P355,P749,parent organization,organization,ORG,organization,ORG,,,,,,inverse in source list
+significant event,significant event,P793,Q82359822,significant event for,entity,PERSON,occurrence,EVENT,,,,,Y,
+spouse,spouse,P26,P26,spouse,fictional character,PERSON,,PERSON,married_to,use as-is,P26,spouse,Y,automatically reciprocal
+location,location,P276,P4330,contains,,multiple,physical location,LOC,based_in,use location as standard,P276,location,Y,
+family,family,P53,Q125703439,family member,human,PERSON,family,FAMILY,,,,,Y,
+owner of,owner of,P1830,P127,owned by,organization,"ORG,PERSON",organization,ORG,owns,standardize on main relation inverse owned by,P1830,owner of,,inverse in source list
+inception,inception,P571,,,,multiple,,DATE,,,,,Y,
+sibling,sibling,P3373,P3373,sibling,human,PERSON,person,PERSON,sibling_of,use as-is,P3373,sibling,Y,automatically reciprocal
+participant in,participant in,P1344,P710,participant,human,"ORG,PERSON",occurrence,EVENT,,,,,,inverse in source list
+field of work,field of work,P101,Q105476280,specialized in this field,human,PERSON,,OCCUPATION,,,,,Y,
+founded by,founded by,P112,Q65972149,founder of,organization,ORG,human,PERSON,founded_by,use as-is,P112,founded by,Y,
+office held by head of the organization,office held by head of the organization,P2388,P2389,organization directed by the office or position,organization,ORG,position,POSITION,,,,,Y,
+country of citizenship,country of citizenship,P27,Q111785410,citizen of this country,human,PERSON,former or current state,GPE,,,,,Y,
+industry,industry,P452,Q111462335,works in this industry,organization,ORG,industrial sector,INDUSTRY,,,,,Y,
+father,father,P22,P40,child,human,PERSON,person,PERSON,child_of,standardize on main relation inverse child,P8810,parent,Y,inverse in source list
+shares border with,shares border with,P47,P47,shares border with,geographical feature,GPE,geographical feature,GPE,,,,,Y,automatically reciprocal
+child,child,P40,P8810,parent,person,PERSON,human,PERSON,parent_of,use as-is,P40,child,Y,inverse in source list - consider main
+residence,residence,P551,Q107616534,residence of,human,PERSON,geographic location,GPE,lived_in,use as-is,P551,residence,Y,
+contains administrative territorial entity,contains the administrative territorial entity,P150,,,administrative territorial entity,GPE,administrative territorial entity,GPE,,,,,Y,
+appointed by,appointed by,P748,,,human,PERSON,human,PERSON,,,,,Y,
+head of government,head of government,P6,Q65964565,head of government of,political territorial entity,GPE,human,PERSON,,,,,Y,
+product or material produced,product or material produced or service provided,P1056,P176,manufacturer,organization,ORG,product,PRODUCT,,,,,Y,inverse in source list - consider main
+capital,capital,P36,P1376,capital of,administrative territorial entity,GPE,administrative territorial entity,GPE,,,,,Y,inverse in source list - consider main
+educated at,educated at,P69,Q66004526,has educated,human,PERSON,educational institution,ORG,school_attended,use as-is,P69,educated at,Y,
+legislated by,legislated by,P467,,,statute,LAW,legislature,ORG,,,,,Y,
+place of birth,place of birth,P19,Q65933043,born here,human,PERSON,geographic location,"LOC,GPE",born_in,use as-is,P19,place of birth,Y,
+head of state,head of state,P35,Q65964594,head of state of,state,GPE,human,PERSON,,,,,Y,
+office held by head of government,office held by head of government,P1313,Q81718783,governor of,administrative territorial entity,GPE,position,POSITION,,,,,Y,
+operator,operator,P137,P121,item operated,,multiple,organization,"ORG,PERSON",,,,,Y,
+editor,editor,P98,Q66004589,editor of,work,PUBLICATION,human,PERSON,,,,,Y,
+legislative body,legislative body,P194,Q66809459,legislative body of,political territorial entity,GPE,legislature,ORG,,,,,Y,
+location of formation,location of formation,P740,,,organization,ORG,,"LOC,GPE",,,,,Y,
+presenter,presenter,P371,Q66088498,presenter of,work,PUBLICATION,human,PERSON,,,,,Y,
+candidacy in election,candidacy in election,P3602,P726,candidate,human,PERSON,public election,EVENT,,,,,Y,inverse in source list - consider main
+capital of,capital of,P1376,P36,capital,,GPE,administrative territorial entity,GPE,,,,,,inverse in source list
+place of death,place of death,P20,Q65964588,died here,human,PERSON,geographic location,"LOC,GPE",died_in,use as-is,P20,place of death,Y,
+"dissolved, abolished or demolished date","dissolved, abolished or demolished date",P576,,,organization,ORG,,DATE,,,,,Y,
+replaces,replaces,P1365,P1366,replaced by,,multiple,,multiple,,,,,Y,inverse in source list - consider main
+date of death,date of death,P570,,,human,PERSON,,DATE,date_of_death,use as-is,P570,date of death,Y,
+replaced by,replaced by,P1366,P1365,replaces,,multiple,,multiple,,,,,,inverse in source list
+candidate,candidate,P726,P3602,candidacy in election,public election,EVENT,human,PERSON,,,,,,inverse in source list
+organizer,organizer,P664,Q106637604,organizer of,occurrence,EVENT,organization,"ORG,PERSON",,,,,Y,
+military rank,military rank,P410,,,human,PERSON,military rank,POSITION,,,,,Y,
+authority,authority,P797,Q125703425,jurisdiction,,multiple,,multiple,,,,,Y,
+member of sports team,member of sports team,P54,Q65971553,has member,human,PERSON,sports club,ORG,,,,,Y,
+relative,relative,P1038,P1038,relative,human,PERSON,human,PERSON,,,,,Y,automatically reciprocal
+cast member,cast member,P161,Q66318312,cast member of,performing arts production,EVENT,human,PERSON,,,,,Y,
+mother,mother,P25,P40,child,human,PERSON,human,PERSON,child_of,use as-is,P8810,parent,Y,inverse in source list
+country of origin,country of origin,P495,,,product,PRODUCT,country,GPE,origin,use as-is,P495,country of origin,Y,
+manufacturer,manufacturer,P176,P1056,product or material produced,concrete object,PRODUCT,organization,ORG,,,,,,inverse in source list
+affiliation,affiliation,P1416,Q69467106,affiliated entity,human,PERSON,organization,ORG,,,,,Y,
+military branch,military branch,P241,,,military unit,ORG,military branch,ORG,,,,,Y,
+award received,award received,P166,Q66796038,award received by,,"ORG,PERSON",award,AWARD,,,,,Y,
+director,director,P57,Q65971570,director of,performing arts production,EVENT,human,PERSON,,,,,Y,
+religion,religion or worldview,P140,Q70604090,followers of this religion,human,PERSON,religion or world view,ORG,,,,,Y,
+participating team,participating team,P1923,,,,EVENT,sports team,ORG,,,,,Y,
+,employee,Q65964542,,,organization,ORG,human,PERSON,works_for,,Q65964542,employee,,
+,aliases,,,,,multiple,,multiple,alternate_name,,,,,available via claim detail - not a property
