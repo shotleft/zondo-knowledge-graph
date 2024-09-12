@@ -29,7 +29,6 @@ Information extraction:
     - __NamedEntity__
     - __CrCluster__ (containing __Mention__)
     - __Relation__
-    - __EntityLink__
 
 Building the KG:
 
