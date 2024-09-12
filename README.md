@@ -1,6 +1,6 @@
 # Automating knowledge graph construction from news articles
 
-This repo contains all the code that was used to build a knowledge graph from 2081 articles published by News24 on the topic of the _Zondo Commission_ as described in the project report submitted to the University of London. As per agreement with Media24 (who owns the articles), a sample of 30 of the unlocked articles, i.e. those not behind the paywall, is supplied with the code (see ```source_data/sample_text_30_unlocked.pq```).
+This repo contains all the code that was used to build a knowledge graph from 2081 articles published by News24 on the topic of the _Zondo Commission_ as described in the project report submitted to the University of London. As per agreement with Media24 (who owns the articles), a sample of 30 of the unlocked articles, i.e. those not behind the paywall, is supplied with the code in parquet format (see ```source_data/sample_text_30_unlocked.pq```) which can be read using the Pandas library.
 
 ## Acknowledgements
 
@@ -9,7 +9,7 @@ Where very specific ideas have been used that were found in blogs, stackoverflow
 ## Acronyms in this readme.md
 
 - KG - knowledge graph
-- HITL dataset - human-in-the-loop dataset, sample of 30 annotated articles used for evaluation
+- HITL dataset - human-in-the-loop dataset (sample of 30 annotated articles used for evaluation)
 - NER - named entity recognition
 - CR - coreference resolution
 - REX - relation extraction
@@ -17,29 +17,33 @@ Where very specific ideas have been used that were found in blogs, stackoverflow
 
 ## ```kg_builder```
 
-The ```kg_builder``` folder contains all the required dataclasses, functions and methods that were used to build and test the knowledge graph. What follows is an overview of the role of each one:
+This folder contains all the required dataclasses, functions and methods that were used to build and test the knowledge graph. What follows is an overview of the role of each one:
 
 #### ```kg/kg_dataclasses.py```
 
 Includes data classes for structuring key elements:
 
-- __Article__ used to hold per-article information extracted from the text
+Information extraction:
+
+- __Article__
     - __NamedEntity__
     - __CrCluster__ (containing __Mention__)
     - __Relation__
     - __EntityLink__
 
+Building the KG:
+
 - __KGData__ used to create an instance of a KG
     - __KGEntity__
     - __KGRelation__
 
- Also includes methods to export to Label Studio to facilitate creation of the HITL dataset.
+ It also includes methods to export to Label Studio to facilitate creation of the HITL dataset.
 
 #### ```kg/kg_processing.py```
 
-Includes all the functions required to build / extend a KG, article by article, from an Article class instance. The main algorithm is ```update_kg_from_article``` which calls the sub-algorithm ```process_entity``` which includes performing EL where possible (up to a maximum of 5 retries).
+Includes all the functions required to build and/or extend a KG, article by article, from an Article class instance. The main algorithm is ```update_kg_from_article``` which calls the sub-algorithm ```process_entity``` which includes performing EL where possible (up to a maximum of 5 retries).
 
-Also includes methods ```prepare_kg_neo4j_files``` and ```prepare_kg_nx_files``` to export the KGData instance to the appropriate formats to be read in by neo4j and NetworkX library respectively.
+It also includes methods ```prepare_kg_neo4j_files``` and ```prepare_kg_nx_files``` to export the KGData instance to the appropriate formats to be read in by neo4j and the NetworkX library respectively.
 
 #### ```ner/ner_base.py```
 
@@ -76,7 +80,7 @@ The file ```reference_info/rebel_flair_selected.csv``` contains the offline work
 
 ## Notebooks
 
-The following notebooks reflect sequential stages of development and testing as described in the accompanying project report:
+The following notebooks reflect the sequential stages of development and testing as described in the accompanying project report:
 
 #### _5.1	Round 1 - component evaluation & selection of project report_
 
