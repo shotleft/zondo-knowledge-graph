@@ -106,3 +106,5 @@ Additional utility notebooks are included for reference as follows:
 
 - ```0. assemble_source_data.ipynb``` was used to extract the articles from sources and prepare them for further processing (this includes the full set of articles as well as the sample of 30 used for evaluation)
 - ```1. compile_ontology_data.ipynb``` was used to update the ontology information when adjustments were made
+
+Finally, ```requirements.txt``` contains info on the versions used for all main libraries on the project.
